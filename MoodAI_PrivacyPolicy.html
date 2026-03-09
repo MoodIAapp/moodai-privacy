@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoodAI — Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080810;
+    --card: #0F0F1A;
+    --border: #1A1A2E;
+    --teal: #00D2A0;
+    --purple: #7C3AED;
+    --text: #FFFFFF;
+    --text2: #8B8B9E;
+    --text3: #3A3A52;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 10% 10%, rgba(0,210,160,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 90% 80%, rgba(124,58,237,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  header {
+    padding: 60px 0 48px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--teal), #00A0D0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .logo-name {
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--teal), #00A0D0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .lang-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .lang-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text2);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .lang-btn.active {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #000;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  h1 span {
+    background: linear-gradient(90deg, var(--teal), #00A0D0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .meta {
+    color: var(--text2);
+    font-size: 14px;
+  }
+
+  /* Summary cards */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+
+  .summary-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+
+  .summary-card:hover { border-color: rgba(0,210,160,0.3); }
+
+  .summary-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .summary-text strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .summary-text span {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:last-of-type {
+    border-bottom: none;
+  }
+
+  .section-number {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+
+  p {
+    color: var(--text2);
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    margin: 14px 0;
+  }
+
+  ul li {
+    color: var(--text2);
+    font-size: 15px;
+    padding: 6px 0 6px 22px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 13px;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(0,210,160,0.06), rgba(0,160,208,0.04));
+    border: 1px solid rgba(0,210,160,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .highlight-box p {
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-left {
+    color: var(--text2);
+    font-size: 13px;
+  }
+
+  .footer-contact {
+    color: var(--teal);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .footer-contact:hover { text-decoration: underline; }
+
+  /* Language sections */
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+
+  @media (max-width: 600px) {
+    header { padding: 40px 0 36px; }
+    .summary-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">🌊</div>
+      <span class="logo-name">MoodAI</span>
+    </div>
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">🇺🇸 English</button>
+      <button class="lang-btn" onclick="setLang('es')">🇪🇸 Español</button>
+    </div>
+
+    <!-- English -->
+    <div class="lang-section active" id="header-en">
+      <h1>Privacy <span>Policy</span></h1>
+      <p class="meta">Last updated: March 2026 · Effective immediately</p>
+    </div>
+
+    <!-- Spanish -->
+    <div class="lang-section" id="header-es">
+      <h1>Política de <span>Privacidad</span></h1>
+      <p class="meta">Última actualización: Marzo 2026 · Vigente de inmediato</p>
+    </div>
+  </header>
+
+  <!-- Summary cards — English -->
+  <div class="summary-grid lang-section active" id="summary-en">
+    <div class="summary-card">
+      <div class="summary-icon">📱</div>
+      <div class="summary-text">
+        <strong>Stored on your device</strong>
+        <span>All journal data stays locally on your iPhone. We never upload it.</span>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">🚫</div>
+      <div class="summary-text">
+        <strong>No data sold</strong>
+        <span>We never sell, rent, or share your personal data with third parties.</span>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">🔒</div>
+      <div class="summary-text">
+        <strong>Your data, your control</strong>
+        <span>You can delete all your data at any time from Settings.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summary cards — Spanish -->
+  <div class="summary-grid lang-section" id="summary-es">
+    <div class="summary-card">
+      <div class="summary-icon">📱</div>
+      <div class="summary-text">
+        <strong>Guardado en tu dispositivo</strong>
+        <span>Todos los datos del diario se guardan localmente en tu iPhone.</span>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">🚫</div>
+      <div class="summary-text">
+        <strong>No vendemos datos</strong>
+        <span>Nunca vendemos, alquilamos ni compartimos tus datos personales.</span>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-icon">🔒</div>
+      <div class="summary-text">
+        <strong>Tus datos, tu control</strong>
+        <span>Podés eliminar todos tus datos en cualquier momento desde Ajustes.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ENGLISH CONTENT ── -->
+  <div class="lang-section active" id="content-en">
+
+    <div class="section">
+      <div class="section-number">01</div>
+      <h2>Introduction</h2>
+      <p>MoodAI ("we", "us", or "our") is a mental wellness journaling app designed to help you track your mood, emotions, and personal growth. This Privacy Policy explains how we handle your information when you use our app.</p>
+      <p>We have designed MoodAI with privacy as a core principle. Your mental health data is deeply personal, and we take that responsibility seriously.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">02</div>
+      <h2>Information We Collect</h2>
+      <p><strong style="color:#fff">Information you provide directly:</strong></p>
+      <ul>
+        <li>Mood entries, emotional states, and journal text you write</li>
+        <li>Wellness data such as sleep hours and energy levels</li>
+        <li>Activities and gratitude entries</li>
+        <li>Your first name (optional, for personalization)</li>
+        <li>Notification preferences and app settings</li>
+      </ul>
+      <div class="highlight-box">
+        <p>✅ All of the above is stored <strong>exclusively on your device</strong> using Apple's local storage. This data never leaves your iPhone unless you explicitly use the "Export Data" feature.</p>
+      </div>
+      <p><strong style="color:#fff">Information collected automatically:</strong></p>
+      <ul>
+        <li>Basic app usage analytics (crashes, errors) via Apple's built-in frameworks only</li>
+        <li>Purchase status for Premium subscriptions (processed entirely by Apple)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">03</div>
+      <h2>AI-Powered Features</h2>
+      <p>MoodAI Premium includes AI-generated insights powered by Anthropic's Claude API. When you request an AI insight:</p>
+      <ul>
+        <li>Your journal entry text is sent securely to Anthropic's API to generate a personalized response</li>
+        <li>This data is transmitted over encrypted HTTPS connections</li>
+        <li>Anthropic's data retention policies apply — see <a href="https://www.anthropic.com/privacy" style="color:var(--teal)">anthropic.com/privacy</a></li>
+        <li>We do not store your journal content on our own servers</li>
+        <li>You can disable AI features at any time by not using them</li>
+      </ul>
+      <p>AI insights are completely optional. The app functions fully without them.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">04</div>
+      <h2>Subscriptions & Payments</h2>
+      <p>MoodAI offers optional Premium subscriptions processed entirely through Apple's App Store (In-App Purchases). We never see, store, or process your payment information.</p>
+      <ul>
+        <li>All billing is handled by Apple</li>
+        <li>Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date</li>
+        <li>You can manage or cancel subscriptions in iPhone Settings → Apple ID → Subscriptions</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">05</div>
+      <h2>Data Sharing</h2>
+      <p>We do not sell, trade, rent, or share your personal data with any third parties for commercial purposes. Period.</p>
+      <p>The only third-party service we use is:</p>
+      <ul>
+        <li><strong style="color:#fff">Anthropic Claude API</strong> — only when you actively request an AI insight (Premium feature)</li>
+        <li><strong style="color:#fff">Apple App Store</strong> — for payment processing and app distribution</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">06</div>
+      <h2>Your Rights & Data Control</h2>
+      <p>You have full control over your data at all times:</p>
+      <ul>
+        <li><strong style="color:#fff">Access</strong> — all your data is visible in the app at any time</li>
+        <li><strong style="color:#fff">Export</strong> — export all your data as a text file (Premium feature)</li>
+        <li><strong style="color:#fff">Delete</strong> — delete all data permanently via Settings → Delete All Data</li>
+        <li><strong style="color:#fff">Uninstall</strong> — deleting the app removes all locally stored data</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">07</div>
+      <h2>Children's Privacy</h2>
+      <p>MoodAI is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">08</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes through the app. The "Last updated" date at the top of this page will always reflect the most recent revision.</p>
+      <p>Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">09</div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <div class="highlight-box">
+        <p>📧 <strong>privacy@moodai.app</strong><br>We aim to respond within 48 hours.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── SPANISH CONTENT ── -->
+  <div class="lang-section" id="content-es">
+
+    <div class="section">
+      <div class="section-number">01</div>
+      <h2>Introducción</h2>
+      <p>MoodAI ("nosotros" o "la app") es una app de bienestar mental diseñada para ayudarte a registrar tu mood, emociones y crecimiento personal. Esta Política de Privacidad explica cómo manejamos tu información cuando usás la app.</p>
+      <p>Diseñamos MoodAI con la privacidad como principio central. Tus datos de salud mental son profundamente personales, y tomamos esa responsabilidad muy en serio.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">02</div>
+      <h2>Información que recopilamos</h2>
+      <p><strong style="color:#fff">Información que vos proporcionás:</strong></p>
+      <ul>
+        <li>Entradas de mood, estados emocionales y texto del diario</li>
+        <li>Datos de bienestar como horas de sueño y nivel de energía</li>
+        <li>Actividades y entradas de gratitud</li>
+        <li>Tu nombre (opcional, para personalización)</li>
+        <li>Preferencias de notificaciones y configuración de la app</li>
+      </ul>
+      <div class="highlight-box">
+        <p>✅ Todo lo anterior se guarda <strong>exclusivamente en tu dispositivo</strong> usando el almacenamiento local de Apple. Estos datos nunca salen de tu iPhone a menos que uses la función "Exportar datos".</p>
+      </div>
+      <p><strong style="color:#fff">Información recopilada automáticamente:</strong></p>
+      <ul>
+        <li>Análisis básico de uso de la app (crashes, errores) solo a través de los frameworks nativos de Apple</li>
+        <li>Estado de suscripción Premium (procesado íntegramente por Apple)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">03</div>
+      <h2>Funciones con Inteligencia Artificial</h2>
+      <p>MoodAI Premium incluye insights generados por IA mediante la API Claude de Anthropic. Cuando solicitás un insight de IA:</p>
+      <ul>
+        <li>El texto de tu entrada del diario se envía de forma segura a la API de Anthropic</li>
+        <li>La transmisión es cifrada mediante HTTPS</li>
+        <li>Se aplican las políticas de retención de datos de Anthropic — ver <a href="https://www.anthropic.com/privacy" style="color:var(--teal)">anthropic.com/privacy</a></li>
+        <li>No almacenamos el contenido de tu diario en nuestros propios servidores</li>
+        <li>Podés desactivar las funciones de IA simplemente no usándolas</li>
+      </ul>
+      <p>Los insights de IA son completamente opcionales. La app funciona perfectamente sin ellos.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">04</div>
+      <h2>Suscripciones y pagos</h2>
+      <p>MoodAI ofrece suscripciones Premium opcionales procesadas íntegramente por el App Store de Apple. Nunca vemos, almacenamos ni procesamos tu información de pago.</p>
+      <ul>
+        <li>Toda la facturación es gestionada por Apple</li>
+        <li>Las suscripciones se renuevan automáticamente salvo que las canceles al menos 24 horas antes de la fecha de renovación</li>
+        <li>Podés gestionar o cancelar suscripciones en Ajustes del iPhone → Apple ID → Suscripciones</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">05</div>
+      <h2>Compartir datos</h2>
+      <p>No vendemos, intercambiamos, alquilamos ni compartimos tus datos personales con terceros con fines comerciales. Punto.</p>
+      <p>Los únicos servicios de terceros que utilizamos son:</p>
+      <ul>
+        <li><strong style="color:#fff">API Claude de Anthropic</strong> — solo cuando solicitás activamente un insight de IA (función Premium)</li>
+        <li><strong style="color:#fff">App Store de Apple</strong> — para el procesamiento de pagos y distribución de la app</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">06</div>
+      <h2>Tus derechos y control de datos</h2>
+      <p>Tenés control total sobre tus datos en todo momento:</p>
+      <ul>
+        <li><strong style="color:#fff">Acceso</strong> — todos tus datos son visibles en la app en cualquier momento</li>
+        <li><strong style="color:#fff">Exportar</strong> — exportá todos tus datos como archivo de texto (función Premium)</li>
+        <li><strong style="color:#fff">Eliminar</strong> — eliminá todos los datos permanentemente desde Ajustes → Eliminar todos los datos</li>
+        <li><strong style="color:#fff">Desinstalar</strong> — eliminar la app borra todos los datos almacenados localmente</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">07</div>
+      <h2>Privacidad de menores</h2>
+      <p>MoodAI no está dirigida a menores de 13 años. No recopilamos intencionalmente información personal de menores de 13 años. Si creés que un menor nos ha proporcionado información personal, contactanos y la eliminaremos de inmediato.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">08</div>
+      <h2>Cambios en esta política</h2>
+      <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Te notificaremos sobre cambios significativos a través de la app. La fecha "Última actualización" al inicio de esta página siempre reflejará la revisión más reciente.</p>
+      <p>El uso continuado de la app tras los cambios constituye la aceptación de la política actualizada.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">09</div>
+      <h2>Contacto</h2>
+      <p>Si tenés preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o tus datos personales, contactanos:</p>
+      <div class="highlight-box">
+        <p>📧 <strong>privacy@moodai.app</strong><br>Nos comprometemos a responder en un plazo de 48 horas.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 MoodAI · All rights reserved</div>
+    <a href="mailto:privacy@moodai.app" class="footer-contact">privacy@moodai.app</a>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(l) {
+    document.querySelectorAll('.lang-btn').forEach((b,i) => {
+      b.classList.toggle('active', (i===0&&l==='en')||(i===1&&l==='es'));
+    });
+    ['header','summary','content'].forEach(section => {
+      document.getElementById(section+'-en').classList.toggle('active', l==='en');
+      document.getElementById(section+'-es').classList.toggle('active', l==='es');
+    });
+    document.documentElement.lang = l;
+  }
+</script>
+</body>
+</html>
